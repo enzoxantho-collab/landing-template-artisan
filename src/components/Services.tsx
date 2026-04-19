@@ -78,10 +78,10 @@ export default function Services() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block text-[#c62828] font-bold text-xs tracking-widest uppercase mb-3">
+          <span className="inline-block text-[var(--color-accent)] font-bold text-xs tracking-widest uppercase mb-3">
             Nos prestations
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#0f2640] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-black text-[var(--color-primary)] mb-4">
             Tous vos travaux<br className="hidden sm:block" /> dans le {CONFIG.departement}
           </h2>
           <p className="text-slate-500 text-base max-w-xl mx-auto">
@@ -104,10 +104,10 @@ export default function Services() {
               className="group relative bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               {/* Accent line top */}
-              <div className="absolute top-0 left-6 right-6 h-0.5 rounded-full bg-gradient-to-r from-[#1a3a5c] to-[#c62828] opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-0 left-6 right-6 h-0.5 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div className="flex items-start justify-between mb-4">
-                <div className="w-14 h-14 rounded-xl bg-[#0f2640]/5 text-[#1a3a5c] flex items-center justify-center group-hover:bg-[#0f2640] group-hover:text-white transition-all">
+                <div className="w-14 h-14 rounded-xl bg-[var(--color-primary)]/5 text-[var(--color-primary)] flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:text-white transition-all">
                   {ICONS[s.icon] ?? ICONS.wrench}
                 </div>
                 {s.badge && (
@@ -117,7 +117,7 @@ export default function Services() {
                 )}
               </div>
 
-              <h3 className="font-black text-[#0f2640] text-lg mb-2">{s.title}</h3>
+              <h3 className="font-black text-[var(--color-primary)] text-lg mb-2">{s.title}</h3>
               <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
@@ -126,7 +126,7 @@ export default function Services() {
         {/* CTA band */}
         <div
           className="rounded-2xl p-6 sm:p-8 text-center"
-          style={{ background: 'linear-gradient(135deg, #0f2640 0%, #1a3a5c 100%)' }}
+          style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary) 100%)' }}
         >
           <p className="text-white font-black text-xl sm:text-2xl mb-2">Un problème ? Besoin d'un {CONFIG.metier} ?</p>
           <p className="text-white/70 mb-6 text-sm">
@@ -134,7 +134,7 @@ export default function Services() {
           </p>
           <a
             href={`tel:${PHONE}`}
-            className="inline-flex items-center gap-3 bg-[#c62828] hover:bg-[#e53935] text-white font-black text-lg px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105"
+            className="inline-flex items-center gap-3 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-black text-lg px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>

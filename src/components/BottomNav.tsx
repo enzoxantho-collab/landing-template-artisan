@@ -2,7 +2,7 @@ export default function BottomNav() {
   const linkClass = "flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl text-white/60 transition-all duration-150 active:scale-90 active:text-white active:bg-white/10 touch-manipulation";
 
   return (
-    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center bg-[#0f2640] border-t border-white/10 px-1"
+    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center bg-[var(--color-primary)] border-t border-white/10 px-1"
       style={{ paddingTop: '0.375rem', paddingBottom: 'calc(0.375rem + env(safe-area-inset-bottom))' }}
     >
       <a href="#services" className={linkClass}>

@@ -8,13 +8,16 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-[#0f2640] min-h-[88vh] flex flex-col"
+      className="relative overflow-hidden bg-[var(--color-primary)] min-h-[88vh] flex flex-col"
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none select-none">
         {/* Large gradient blobs */}
-        <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#1a3a5c] opacity-60 blur-3xl" />
-        <div className="absolute top-1/2 -right-40 w-[400px] h-[400px] rounded-full bg-[#c62828]/10 opacity-80 blur-3xl" />
+        <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-[var(--color-primary)] opacity-60 blur-3xl" />
+        <div
+          className="absolute top-1/2 -right-40 w-[400px] h-[400px] rounded-full opacity-80 blur-3xl"
+          style={{ background: 'color-mix(in srgb, var(--color-accent) 10%, transparent)' }}
+        />
         {/* Grid lines */}
         <svg className="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -27,7 +30,7 @@ export default function Hero() {
         {/* Diagonal accent bar */}
         <div
           className="absolute top-0 right-0 h-full w-1/3 opacity-10"
-          style={{ background: 'linear-gradient(135deg, transparent 30%, #c62828 100%)' }}
+          style={{ background: 'linear-gradient(135deg, transparent 30%, var(--color-accent) 100%)' }}
         />
       </div>
 
@@ -36,13 +39,13 @@ export default function Hero() {
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
             Votre{' '}
-            <span className="text-[#4a9de0]">{CONFIG.metierCapital}</span>
+            <span className="text-[var(--color-primary-light)]">{CONFIG.metierCapital}</span>
             <br />
             <span className="relative inline-block">
               <span className="text-white">{CONFIG.hero.zone}</span>
               <span
                 className="absolute bottom-0 left-0 w-full h-1 rounded-full"
-                style={{ background: 'linear-gradient(90deg, #c62828, #e53935)' }}
+                style={{ background: 'linear-gradient(90deg, var(--color-accent), var(--color-accent-hover))' }}
               />
             </span>
           </h1>
@@ -64,9 +67,9 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
             <a
               href={`tel:${PHONE}`}
-              className="group relative inline-flex items-center justify-center gap-3 bg-[#c62828] hover:bg-[#e53935] text-white font-black text-xl px-8 py-5 rounded-2xl shadow-2xl transition-all hover:scale-105 hover:shadow-[#c62828]/40"
+              className="group relative inline-flex items-center justify-center gap-3 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-black text-xl px-8 py-5 rounded-2xl shadow-2xl transition-all hover:scale-105"
             >
-              <span className="absolute inset-0 rounded-2xl ring-2 ring-[#c62828]/50 animate-ping opacity-30" />
+              <span className="absolute inset-0 rounded-2xl ring-2 ring-[var(--color-accent)] animate-ping opacity-30" />
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
               </svg>
@@ -107,7 +110,7 @@ export default function Hero() {
             {/* Halo derrière la photo */}
             <div
               className="absolute -inset-3 rounded-3xl blur-2xl opacity-20"
-              style={{ background: 'radial-gradient(ellipse, #2d6db5 0%, #c62828 60%, transparent 80%)' }}
+              style={{ background: 'radial-gradient(ellipse, var(--color-primary) 0%, var(--color-accent) 60%, transparent 80%)' }}
             />
             <img
               src={CONFIG.photos.hero}
@@ -118,7 +121,7 @@ export default function Hero() {
             <div className="absolute -bottom-5 -right-3 lg:-right-5">
               <div
                 className="absolute inset-0 rounded-full blur-xl opacity-50"
-                style={{ background: 'radial-gradient(circle, #2d6db5, transparent)' }}
+                style={{ background: 'radial-gradient(circle, var(--color-primary), transparent)' }}
               />
               <div className="relative">
                 <img

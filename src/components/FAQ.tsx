@@ -12,9 +12,9 @@ function FAQItem({ q, a, isOpen, onToggle }: { q: string; a: string; isOpen: boo
         className="w-full flex items-start justify-between gap-4 px-6 py-4 text-left bg-white hover:bg-slate-50 transition-colors"
         aria-expanded={isOpen}
       >
-        <span className="font-bold text-[#0f2640] text-sm sm:text-base leading-snug">{q}</span>
+        <span className="font-bold text-[var(--color-primary)] text-sm sm:text-base leading-snug">{q}</span>
         <span
-          className={`flex-shrink-0 w-6 h-6 rounded-full border-2 border-[#1a3a5c] flex items-center justify-center text-[#1a3a5c] transition-transform duration-300 ${
+          className={`flex-shrink-0 w-6 h-6 rounded-full border-2 border-[var(--color-primary)] flex items-center justify-center text-[var(--color-primary)] transition-transform duration-300 ${
             isOpen ? 'rotate-45' : ''
           }`}
         >
@@ -39,10 +39,10 @@ export default function FAQ() {
     <section id="faq" className="bg-slate-50 py-16 md:py-24 scroll-mt-20 lg:scroll-mt-24">
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="inline-block text-[#c62828] font-bold text-xs tracking-widest uppercase mb-3">
+          <span className="inline-block text-[var(--color-accent)] font-bold text-xs tracking-widest uppercase mb-3">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#0f2640] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-black text-[var(--color-primary)] mb-4">
             Questions fréquentes
           </h2>
           <p className="text-slate-500 text-sm">
@@ -65,14 +65,14 @@ export default function FAQ() {
         {/* Bottom CTA */}
         <div
           className="rounded-2xl p-6 text-center"
-          style={{ background: 'linear-gradient(135deg, #0f2640 0%, #1a3a5c 100%)' }}
+          style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary) 100%)' }}
         >
           <p className="text-white font-bold text-lg mb-1">Votre question n'est pas ici ?</p>
           <p className="text-white/60 text-sm mb-5">Appelez-nous ou écrivez-nous sur WhatsApp — réponse immédiate.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={`tel:${PHONE}`}
-              className="inline-flex items-center justify-center gap-2 bg-[#c62828] hover:bg-[#e53935] text-white font-bold px-6 py-3 rounded-full text-sm transition-all hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-bold px-6 py-3 rounded-full text-sm transition-all hover:scale-105"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>

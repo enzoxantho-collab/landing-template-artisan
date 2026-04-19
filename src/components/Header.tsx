@@ -4,9 +4,9 @@ const PHONE_DISPLAY = CONFIG.phoneDisplay;
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0f2640] shadow-lg">
+    <header className="sticky top-0 z-50 w-full bg-[var(--color-primary)] shadow-lg">
       {/* Top bar urgence */}
-      <div className="hidden sm:block bg-[#c62828] py-1.5 px-4 text-center text-white text-xs font-semibold tracking-wide">
+      <div className="hidden sm:block bg-[var(--color-accent)] py-1.5 px-4 text-center text-white text-xs font-semibold tracking-wide">
         🔴 URGENCE 24h/24 — 7j/7 &nbsp;|&nbsp; Intervention rapide dans tout le {CONFIG.departement}
       </div>
 
@@ -56,7 +56,7 @@ export default function Header() {
           {/* Phone CTA */}
           <a
             href={`tel:${PHONE}`}
-            className="cta-pulse relative flex items-center gap-2 bg-[#c62828] hover:bg-[#e53935] text-white font-bold px-4 py-2.5 rounded-full shadow-lg transition-all text-sm whitespace-nowrap"
+            className="cta-pulse relative flex items-center gap-2 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-bold px-4 py-2.5 rounded-full shadow-lg transition-all text-sm whitespace-nowrap"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>

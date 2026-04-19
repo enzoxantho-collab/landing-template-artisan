@@ -289,7 +289,9 @@ export const CONFIG = {
     hebergeurUrl: 'https://vercel.com',
   },
 
-  // Couleurs (référence — les classes Tailwind sont dans les composants)
+  // Couleurs (référence — injectées comme CSS variables dans App.tsx)
   couleurPrimaire: '#0f2640',
+  couleurPrimaireLight: '#4a9de0',
   couleurAccent: '#c62828',
+  couleurAccentHover: '#e53935',
 };

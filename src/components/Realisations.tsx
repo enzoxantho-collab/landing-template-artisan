@@ -20,10 +20,10 @@ export default function Realisations() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block text-[#c62828] font-bold text-xs tracking-widest uppercase mb-3">
+          <span className="inline-block text-[var(--color-accent)] font-bold text-xs tracking-widest uppercase mb-3">
             Nos réalisations
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#0f2640] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-black text-[var(--color-primary)] mb-4">
             Travaux réalisés dans le {CONFIG.departement}
           </h2>
           <p className="text-slate-500 text-sm max-w-lg mx-auto">
@@ -61,7 +61,7 @@ export default function Realisations() {
               />
               {p.beforeAfter && (
                 <>
-                  <span className="absolute top-2 left-2 bg-white/90 text-[#0f2640] text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wide">Avant</span>
+                  <span className="absolute top-2 left-2 bg-white/90 text-[var(--color-primary)] text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wide">Avant</span>
                   <div className="absolute inset-y-0 left-1/2 w-0.5 bg-white/60" />
                   <span className="absolute top-2 right-2 bg-green-500/90 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wide">Après</span>
                 </>
@@ -76,10 +76,10 @@ export default function Realisations() {
 
         {/* Testimonials */}
         <div className="text-center mb-8">
-          <span className="inline-block text-[#c62828] font-bold text-xs tracking-widest uppercase mb-2">
+          <span className="inline-block text-[var(--color-accent)] font-bold text-xs tracking-widest uppercase mb-2">
             Avis clients vérifiés
           </span>
-          <h3 className="text-2xl font-black text-[#0f2640]">Ce que disent nos clients</h3>
+          <h3 className="text-2xl font-black text-[var(--color-primary)]">Ce que disent nos clients</h3>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
@@ -91,11 +91,11 @@ export default function Realisations() {
               <StarRating count={t.stars} />
               <p className="text-slate-600 text-sm leading-relaxed mt-3 mb-4 italic">"{t.text}"</p>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-[#0f2640] text-white flex items-center justify-center text-xs font-bold">
+                <div className="w-8 h-8 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center text-xs font-bold">
                   {t.name[0]}
                 </div>
                 <div>
-                  <p className="text-[#0f2640] font-bold text-sm">{t.name}</p>
+                  <p className="text-[var(--color-primary)] font-bold text-sm">{t.name}</p>
                   <p className="text-slate-400 text-xs">{t.city}</p>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { CONFIG } from './config';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -75,9 +76,16 @@ export default function App() {
     return () => document.removeEventListener('click', handleClick);
   }, []);
 
+  const cssVars = {
+    '--color-primary': CONFIG.couleurPrimaire,
+    '--color-primary-light': CONFIG.couleurPrimaireLight,
+    '--color-accent': CONFIG.couleurAccent,
+    '--color-accent-hover': CONFIG.couleurAccentHover,
+  } as React.CSSProperties;
+
   if (currentPage === 'mentions') {
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen" style={cssVars}>
         <Header />
         <main>
           <MentionsLegales />
@@ -89,7 +97,7 @@ export default function App() {
 
   if (currentPage === 'politique') {
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen" style={cssVars}>
         <Header />
         <main>
           <PolitiqueConfidentialite />
@@ -100,7 +108,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={cssVars}>
       <Header />
       <main>
         <Hero />
