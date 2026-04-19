@@ -38,7 +38,6 @@ export default function Hero() {
             Votre{' '}
             <span className="text-[#4a9de0]">{CONFIG.metierCapital}</span>
             <br />
-            dans{' '}
             <span className="relative inline-block">
               <span className="text-white">{CONFIG.hero.zone}</span>
               <span
