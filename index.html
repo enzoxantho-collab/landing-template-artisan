@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+
+    <!-- À MODIFIER : remplacer par le favicon du client (logo.svg ou logo.png) -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- À MODIFIER : Titre SEO → "[Métier] [Département] | [Ville principale] - [Nom entreprise]" -->
+    <title>Artisan Département | Intervention 24h/24 - Nom Entreprise</title>
+
+    <!-- À MODIFIER : Copier CONFIG.metaDescription ici -->
+    <meta name="description" content="Description du site pour les moteurs de recherche..." />
+
+    <!-- À MODIFIER : mots-clés SEO adaptés au métier et à la zone -->
+    <meta name="keywords" content="artisan ville1, artisan ville2, artisan urgence département, dépannage département" />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- À MODIFIER si CONFIG.googleSiteVerification est renseigné, sinon supprimer -->
+    <!-- <meta name="google-site-verification" content="VOTRE_CODE_ICI" /> -->
+
+    <!-- À MODIFIER : code département → ex: FR-34, FR-75, FR-69 -->
+    <meta name="geo.region" content="FR-00" />
+    <!-- À MODIFIER : ville principale du client -->
+    <meta name="geo.placename" content="Ville principale" />
+
+    <!-- À MODIFIER : domaine du client (CONFIG.domaine) -->
+    <link rel="canonical" href="https://exemple.fr" />
+
+    <!-- Open Graph — À MODIFIER avec les infos du client -->
+    <meta property="og:title" content="Artisan Département — Intervention 24h/24 | Nom Entreprise" />
+    <meta property="og:description" content="Description pour le partage sur les réseaux sociaux..." />
+    <meta property="og:type" content="website" />
+    <!-- À MODIFIER : CONFIG.domaine -->
+    <meta property="og:url" content="https://exemple.fr/" />
+    <meta property="og:locale" content="fr_FR" />
+    <!-- À MODIFIER : URL absolue du logo client -->
+    <meta property="og:image" content="https://exemple.fr/logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <!-- À MODIFIER : description de l'image -->
+    <meta property="og:image:alt" content="Nom Entreprise — Artisan dans le Département" />
+
+    <!-- Google Analytics — À MODIFIER si CONFIG.googleAnalyticsId est renseigné, sinon supprimer ce bloc -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <!-- Schema.org — À MODIFIER entièrement avec les données du client -->
+    <!-- @type : choisir parmi Plumber, Electrician, GeneralContractor, HomeAndConstructionBusiness, etc. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Nom Entreprise",
+      "telephone": "+33600000000",
+      "url": "https://exemple.fr",
+      "image": "/logo.svg",
+      "description": "Artisan professionnel — Intervention urgence 24h/24 7j/7",
+      "areaServed": [
+        {"@type": "City", "name": "Ville 1"},
+        {"@type": "City", "name": "Ville 2"},
+        {"@type": "City", "name": "Ville 3"},
+        {"@type": "AdministrativeArea", "name": "Département"}
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Département",
+        "postalCode": "00000",
+        "addressCountry": "FR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "2"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Prénom 1"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Avis client 1..."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Prénom 2"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Avis client 2..."
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Service 1"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Service 2"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Service 3"}}
+        ]
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
