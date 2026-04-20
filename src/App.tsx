@@ -113,7 +113,7 @@ export default function App() {
       <main>
         <Hero />
         <Services />
-        <Urgences />
+        {CONFIG.urgencesEnabled && <Urgences />}
         <Zones />
         <Realisations />
         <Contact />

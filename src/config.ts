@@ -289,6 +289,9 @@ export const CONFIG = {
     hebergeurUrl: 'https://vercel.com',
   },
 
+  // Sections optionnelles
+  urgencesEnabled: true, // false → section urgences masquée (maçon, peintre, charpentier, etc.)
+
   // Couleurs (référence — injectées comme CSS variables dans App.tsx)
   couleurPrimaire: '#0f2640',
   couleurPrimaireLight: '#4a9de0',
